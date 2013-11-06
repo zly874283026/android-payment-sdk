@@ -73,7 +73,7 @@ activity sau:
 
 Appota Payment SDK cung cấp lớp [AppotaPayment](AppotaPayment.html) đóng gói toàn bộ giao diện của từng hình thức thanh toán, để tích hợp bất cứ hình thức thanh toán nào chỉ cần gọi các hàm tương ứng được cung cấp sẵn.
 
-**4 - Chạy SDK Samples**
+**4. Chạy SDK Samples**
 
 Bộ SDK cung cấp kèm theo một sample đơn giản để hướng dẫn bạn sử dụng Payment SDK. Để chạy sample, import project sample trong thư mục SDK vào
 IDE, mở com.appota.paymentonlysample.MainActivity.
