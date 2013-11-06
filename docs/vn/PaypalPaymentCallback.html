@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>PaypalPaymentCallback</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-size: x-large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="auto-style2"><strong>PaypalPaymentCallback</strong></p>
+<p>package com.appota.payment.callback</p>
+<p><span class="auto-style1">public interface </span><strong>
+<span class="auto-style1">PaypalPaymentCallback</span></strong></p>
+<p class="auto-style1"><strong>Tổng quan</strong></p>
+<p>PaypalPaymentCallback là interface định nghĩa các hàm callback sau quá trình 
+thực hiện khởi tạo giao dịch Paypal với hệ thống Appota Payment.</p>
+<p class="auto-style1"><strong>Phương thức</strong></p>
+<table border="1" style="width: 100%" class="gridtable">
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onPaypalPaymentSuccess(<a href="PaypalPaymentCallback.html">PaypalPaymentResult</a> 
+		result)<br />
+		<em>Hàm callback được gọi khi khởi tạo giao dịch thành công.</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onPaypalPaymentError(String message)<br />
+		<em>Hàm callback được gọi khi khởi tạo giao dịch thất bại.</em></td>
+	</tr>
+	</table>
+
+</body>
+
+</html>
