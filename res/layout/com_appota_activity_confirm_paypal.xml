@@ -3,12 +3,61 @@
     xmlns:appota="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/com_appota_bg_payment">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/com_appota_layout_top"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:id="@+id/com_appota_app_icon" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/com_appota_app_icon"
+            android:layout_toLeftOf="@+id/com_appota_btn_refresh"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical">
+
+            <com.appota.payment.widget.AppotaTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/com_appota_confirm_paypal"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+            android:src="@drawable/com_appota_ic_refresh"
+            android:background="@drawable/com_appota_button_click"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            android:id="@+id/com_appota_btn_refresh" />
+
+    </RelativeLayout>
 
     <com.appota.payment.widget.AppotaTextView
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@android:color/white"
         android:gravity="center_vertical|left"
         android:paddingLeft="10dp"
         appota:typeface="Roboto-Light.ttf"
@@ -38,7 +87,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         appota:typeface="Roboto-Light.ttf"
-        android:background="@drawable/com_appota_button_click"
+        android:background="@drawable/com_appota_btn_green_click"
         android:text="@string/com_appota_paypal_verified_transaction"
         android:textColor="@android:color/white"/>
 
@@ -51,7 +100,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         appota:typeface="Roboto-Light.ttf"
-        android:background="@drawable/com_appota_button_click"
+        android:background="@drawable/com_appota_btn_blue_click"
         android:text="@string/com_appota_paypal_resend_email"
         android:textColor="@android:color/white" />
 

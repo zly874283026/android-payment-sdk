@@ -61,4 +61,11 @@
     <string name="com_appota_validator_alnum">The value has not only alnum characters</string>
     <string name="com_appota_validator_hex">The value has not only hexadecimal digit characters</string>
     <string name="com_appota_validator_regexp">The value does not match against pattern.</string>
+    <string name="com_appota_pay_via_sms">Pay via SMS</string>
+    <string name="com_appota_pay_via_card">Pay via card</string>
+    <string name="com_appota_pay_via_bank">Pay via internet banking</string>
+    <string name="com_appota_pay_via_paypal">Pay via PayPal</string>
+    <string name="com_appota_pay_via_google">Pay via Google Play</string>
+    <string name="com_appota_confirm_bank">Confirm bank transaction</string>
+    <string name="com_appota_confirm_paypal">Confirm PayPal transaction</string>
 </resources>

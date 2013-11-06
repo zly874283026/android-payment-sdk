@@ -1,57 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:appota="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/com_appota_gray"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/com_appota_btn_info"
+        android:id="@+id/com_appota_btn_show_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/com_appota_more_button_click"
         android:clickable="true"
+        android:background="@drawable/com_appota_button_click"
         android:orientation="horizontal">
 
         <com.appota.payment.widget.AppotaTextView
             android:id="@+id/com_appota_btn_show_details"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:background="@android:color/transparent"
             android:gravity="center|left"
-            android:paddingLeft="10dp"
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
             android:text="@string/com_appota_info"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            appota:typeface="Roboto-Light.ttf" />
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/com_appota_triangle"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/com_appota_btn_show_details"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:contentDescription="@string/com_appota_details"
-            android:src="@drawable/ic_info" />
+            android:src="@drawable/com_appota_ic_down" />
+
+
     </RelativeLayout>
 
     <com.appota.payment.widget.AppotaTextView
-        android:id="@+id/com_appota_text_desc"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/com_appota_light_blue"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
         android:textSize="16sp"
-        appota:typeface="Roboto-Light.ttf"
-        android:visibility="gone" />
-
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/com_appota_btn_show_details"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/com_appota_text_desc" />
 </LinearLayout>

@@ -61,4 +61,11 @@
     <string name="com_appota_validator_alnum">The value has not only alnum characters</string>
     <string name="com_appota_validator_hex">The value has not only hexadecimal digit characters</string>
     <string name="com_appota_validator_regexp">The value does not match against pattern.</string>
+    <string name="com_appota_pay_via_sms">Thanh toán qua tin nhắn</string>
+    <string name="com_appota_pay_via_card">Thanh toán qua thẻ cào</string>
+    <string name="com_appota_pay_via_bank">Thanh toán qua ngân hàng</string>
+    <string name="com_appota_pay_via_paypal">Thanh toán qua PayPal</string>
+    <string name="com_appota_pay_via_google">Thanh toán qua Google Play</string>
+    <string name="com_appota_confirm_bank">Xác nhận giao dịch ngân hàng</string>
+    <string name="com_appota_confirm_paypal">Xác nhận giao dịch PayPal</string>
 </resources>
