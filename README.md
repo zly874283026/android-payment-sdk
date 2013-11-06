@@ -26,29 +26,30 @@ Tải Appota Payment SDK cho Android và import vào IDE.
 - Mở file \<AndroidMainfest.xml\> trong project Android của bạn.
 
 - Thêm các dòng sau để cấu hình phân quyền:
-
+```xml
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.vending.BILLING" />
+```
 
 - Để sử dụng giao diện thanh toán SMS, thêm cấu hình activity sau:
-
+```xml
     <activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
-
+```
 - Để sử dụng giao diện thanh toán thẻ cào, thêm cấu hình activity sau:
-
+```xml
     <activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
-
+```
 - Để sử dụng giao diện thanh toán internet banking, thêm cấu hình
 activity sau:
-
+```xml
     <activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
     <activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
-
+```
 - Để sử dụng giao diện thanh toán Paypal, thêm cấu hình activity sau:
-
+```xml
     <activity android:name="com.appota.payment.PaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"
     android:windowSoftInputMode="adjustPan" />
     <activity android:name="com.appota.payment.ConfirmPaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
@@ -58,21 +59,21 @@ activity sau:
     <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
     <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
     <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
-
+```
 - Để sử dụng giao diện thanh toán Google Play Payment, thêm cấu hình
 activity sau:
-
+```xml
     <activity android:name="com.appota.payment.GooglePaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
-
+```
 - Để tắt hoặc bật chế độ sandbox, thêm cấu hình sau:
-
+```xml
     <meta-data android:name="sandbox" android:value="false" />
-
+```
 **3. Tích hợp thanh toán**
 
 Appota Payment SDK cung cấp lớp [AppotaPayment](AppotaPayment.html) đóng gói toàn bộ giao diện của từng hình thức thanh toán, để tích hợp bất cứ hình thức thanh toán nào chỉ cần gọi các hàm tương ứng được cung cấp sẵn.
 
-**4 - Chạy SDK Samples**
+**4. Chạy SDK Samples**
 
 Bộ SDK cung cấp kèm theo một sample đơn giản để hướng dẫn bạn sử dụng Payment SDK. Để chạy sample, import project sample trong thư mục SDK vào
 IDE, mở com.appota.paymentonlysample.MainActivity.
