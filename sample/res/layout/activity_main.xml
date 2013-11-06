@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by SMS one amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buySmsOneAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by SMS list amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buySmsListAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Card"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyCard" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Bank one amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyBankOneAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Bank no amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyBankNoAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Bank list amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyBankListAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Paypal one amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyPaypalOneAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Paypal no amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyPaypalNoAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Paypal list amount"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyPaypalListAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Google one item"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyGoogleOneAmount" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy by Google list item"
+            android:layout_gravity="center_horizontal"
+            android:onClick="buyGoogleListAmount" />
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appota="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_appota_bg_color" >
+
+    <ProgressBar
+        android:id="@+id/com_appota_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <com.appota.payment.widget.AppotaButton
+        android:id="@+id/com_appota_btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/com_appota_retry"
+        appota:typeface="Roboto-Light.ttf"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/com_appota_layout_sms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/com_appota_logo"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/com_appota_layout_syntax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="10dp"
+                android:background="@android:color/white"
+                android:visibility="gone" >
+
+                <com.appota.payment.widget.AppotaTextView
+                    android:id="@+id/com_appota_sms_syntax_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/com_appota_sms_syntax"
+                    android:layout_margin="10dp"
+                    appota:typeface="Roboto-Light.ttf"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"/>
+
+                <com.appota.payment.widget.AppotaTextView
+                    android:id="@+id/com_appota_sms_syntax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/com_appota_sms_syntax_title"
+                    android:text="@string/com_appota_sms_syntax"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    appota:typeface="Roboto-Light.ttf"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/dark_line"
+                    android:contentDescription="@string/com_appota_details" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/com_appota_sms_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/com_appota_gray"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <include
+                android:id="@+id/com_appota_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                layout="@layout/com_appota_btn_info" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/com_appota_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/com_appota_payment_logo"
+        android:visibility="gone" />
+
+</RelativeLayout>

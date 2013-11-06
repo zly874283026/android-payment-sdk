@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appota="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/com_appota_gray"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/com_appota_spn_bank"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:entries="@array/com_appota_banks" />
+
+            <RelativeLayout
+                android:id="@+id/com_appota_edittext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <com.appota.payment.widget.AppotaEditText
+                    android:id="@+id/com_appota_edit_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+                    android:layout_toLeftOf="@+id/text_vnd"
+                    android:hint="@string/com_appota_input_bank_amount"
+                    android:textSize="16sp"
+                    appota:typeface="Roboto-Light.ttf"/>
+
+                <com.appota.payment.widget.AppotaTextView
+                    android:id="@+id/text_vnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    appota:typeface="Roboto-Light.ttf"
+                    android:text="VND"/>
+                </RelativeLayout>
+
+            <com.appota.payment.widget.AppotaButton
+                android:id="@+id/com_appota_pay_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/com_appota_edittext_layout"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/com_appota_button_click"
+                android:text="@string/com_appota_pay_on_mobile"
+                android:textColor="@android:color/white"
+                appota:typeface="Roboto-Light.ttf"/>
+
+            <com.appota.payment.widget.AppotaButton
+                android:id="@+id/com_appota_pay_other"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/com_appota_pay_mobile"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/com_appota_button_click"
+                android:text="@string/com_appota_pay_on_other"
+                android:textColor="@android:color/white"
+                appota:typeface="Roboto-Light.ttf"/>
+
+            <include
+                android:id="@+id/com_appota_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                layout="@layout/com_appota_btn_info" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/com_appota_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/com_appota_payment_logo" />
+
+</RelativeLayout>
