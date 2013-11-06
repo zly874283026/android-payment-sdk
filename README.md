@@ -83,5 +83,5 @@ Bạn chỉ cần thay đổi *apiKey*và *sandboxApiKey* được hệ thống 
 cho tất cả các hình thức sẽ hiện ra như dưới đây:
 
 <img src="docs/vn/sample.png" width = "200"/>
-<img src="docs/vn/sample_card.png" style="width: 200px;"/>
-<img src="docs/vn/sample_sms.png" style="width: 200px;"/>
+<img src="docs/vn/sample_card.png" width = "200"/>
+<img src="docs/vn/sample_sms.png" width = "200"/>
