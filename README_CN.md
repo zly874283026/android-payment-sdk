@@ -1,3 +1,5 @@
+Other languages: [Vietnamese](README.md) | [English](README_EN.md)
+
 **Get Started**
 
 Appota Payment SDK
@@ -79,4 +81,7 @@ SDK包也提供一个简单的sample以便指导你是用Payment SDK。想用sam
 只要换*Appota以提供的apiKey和sandboxApiKey并式用project,
 所有支付方式的面板将出现，看以下图片：*
 
-![](sample.png)  ![](sample_card.png)  ![](sample_sms.png)
+<img src="docs/cn/sample.png" width = "200"/>&nbsp;
+<img src="docs/cn/sample_card.png" width = "200"/>&nbsp;
+<img src="docs/cn/sample_sms.png" width = "200"/>&nbsp;
+<img src="docs/cn/sample_paypal.png" width = "200"/>&nbsp;
