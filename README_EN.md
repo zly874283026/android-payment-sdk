@@ -86,4 +86,7 @@ You just change *apiKey*and *sandboxApiKey*provided by Appota for your
 project and run trial project, payment interface for all methods will be
 shown as following:
 
-![](sample.png)  ![](sample_card.png)  ![](sample_sms.png)
+<img src="docs/vn/sample.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_card.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_sms.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_paypal.png" width = "200"/>&nbsp;
