@@ -72,7 +72,7 @@ activity sau:
 
 **3. Tích hợp thanh toán**
 
-Appota Payment SDK cung cấp lớp [AppotaPayment](AppotaPayment.html) đóng gói toàn bộ giao diện của từng hình thức thanh toán, để tích hợp bất cứ hình thức thanh toán nào chỉ cần gọi các hàm tương ứng được cung cấp sẵn.
+Appota Payment SDK cung cấp lớp [AppotaPayment](docs/vn/AppotaPayment.html) đóng gói toàn bộ giao diện của từng hình thức thanh toán, để tích hợp bất cứ hình thức thanh toán nào chỉ cần gọi các hàm tương ứng được cung cấp sẵn.
 
 **4. Chạy SDK Samples**
 
@@ -82,4 +82,7 @@ IDE, mở com.appota.paymentonlysample.MainActivity.
 Bạn chỉ cần thay đổi *apiKey*và *sandboxApiKey* được hệ thống Appota cung cấp cho ứng dụng của bạn và chạy thử project, giao diện thanh toán
 cho tất cả các hình thức sẽ hiện ra như dưới đây:
 
-![](sample.png)  ![](sample_card.png)  ![](sample_sms.png)
+<img src="docs/vn/sample.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_card.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_sms.png" width = "200"/>&nbsp;
+<img src="docs/vn/sample_paypal.png" width = "200"/>&nbsp;
