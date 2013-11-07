@@ -1,3 +1,5 @@
+Other languages: [Vietnamese](README.md) | [Chinese](README_CN.md)
+
 **Get Started**
 
 Appota Payment SDK is the simplest way to integrate payment for your
