@@ -158,6 +158,8 @@ state, String target, String noticeUrl, String title, String description)</p>
 - noticeUrl: URL được gọi khi kết thúc giao dịch <br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeSMSPaymentNoUI">makeSMSPayment</a>(int amount, String state, String 
 target, String noticeUrl, <a href="SMSPaymentCallback.html">SMSPaymentCallback</a> 
@@ -181,6 +183,8 @@ nhập mã thẻ và số sê-ri.</p>
 - noticeUrl: URL được gọi khi kết thúc giao dịch <br />
 - state: Chuỗi state tùy biến cho dev gửi lên<br />
 - target: Chuỗi target tùy biến cho dev gửi lên</p>
+
+<hr />
 <p class="method_detail">public void <a name="makeCardPaymentNoUI">
 makeCardPayment</a>(String cardSerial, String cardCode, String vendor, String 
 noticeUrl, String state, String target, <a href="CardPaymentCallback.html">
@@ -206,6 +210,8 @@ Thẻ MegaCard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
 - noticeUrl: URL được gọi khi kết thúc giao dịch<br />
 - state: Chuỗi state tùy biến cho dev gửi lên<br />- target: Chuỗi target tùy biến cho dev gửi lên<br />
 - callback: Hàm callback được gọi khi kết thúc giao dịch</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeBankPaymentOneAmount">makeBankPayment</a>(int amount, String 
 noticeUrl, String state, String target, String title, String description)</p>
@@ -218,6 +224,8 @@ noticeUrl, String state, String target, String title, String description)</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeBankPaymentListAmount">makeBankPayment</a>(int[] amounts, String 
 noticeUrl, String state, String target, String title, String description)</p>
@@ -230,6 +238,8 @@ noticeUrl, String state, String target, String title, String description)</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeBankPaymentNoAmount">makeBankPayment</a>(String noticeUrl, String 
 state, String target, String title, String description)</p>
@@ -241,6 +251,8 @@ người dùng tự nhập số tiền.</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makePaypalPaymentOneAmount">makePaypalPayment</a>(double amount, String 
 noticeUrl, String state, String target, String title, String description)</p>
@@ -253,6 +265,8 @@ trước.</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void <a name="makePaypalPaymentNoUI">
 makePaypalPayment</a>(String noticeUrl, String state, String target, String 
 title, String description)</p>
@@ -264,6 +278,8 @@ title, String description)</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makePaypalPaymentListAmount">makePaypalPayment</a>(double[] amounts, 
 String noticeUrl, String state, String target, String title, String description)</p>
@@ -276,6 +292,8 @@ String noticeUrl, String state, String target, String title, String description)
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeGooglePlayPaymentListItem">makeGooglePlayPayment</a>(List&lt;<a href="InAppPurchaseItem.html">InAppPurchaseItem</a>&gt; 
 items, String noticeUrl, String state, String target, String title, String 
@@ -289,6 +307,8 @@ description)</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeGooglePlayPaymentOneItem">makeGooglePlayPayment</a>(<a href="InAppPurchaseItem.html">InAppPurchaseItem</a> 
 item, String noticeUrl, String state, String target, String title, String 
