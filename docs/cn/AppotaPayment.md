@@ -1,26 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>AppotaPayment</title>
-<style type="text/css">
-.class_title {
-	font-size: x-large;
-}
-.auto-style1 {
-	font-size: large;
-}
-.auto-style2 {
-	color: #3298D5;
-}
-</style>
-<link href="../main.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-
 <p class="class_title"><strong class="class_title">AppotaPayment</strong></p>
 <p>package com.appota.payment</p>
 <p><span class="auto-style1">public class </span> <strong>
@@ -126,15 +103,15 @@
 </table>
 
 <p>&nbsp;</p>
-<p class="method_detail">public void
-<a name="setContext">setContext</a>(Activity context)</p>
+<hr/><strong><p class="method_detail">public void
+<a name="setContext">setContext</a>(Activity context)</p></strong>
 <p>输入context</p>
 <p><strong>Parameters:</strong></p>
 <p>- context: 显示支付面板的context</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeSMSPaymentOneAmount">makeSMSPayment</a>(int amount, String state, 
 String target, String noticeUrl, String title, String description, final
-<a href="TransactionStatusCallback.html">TransactionStatusCallback</a> callback)</p>
+<a href="TransactionStatusCallback.html">TransactionStatusCallback</a> callback)</p></strong>
 <p>&nbsp;使用信用支付方式，价格已定</p>
 <p><strong>Parameters:</strong></p>
 <p>- amount: 价格<br />
@@ -146,9 +123,9 @@ String target, String noticeUrl, String title, String description, final
 - callback: 交易结束后的callback <br />
 </p>
 <p>&nbsp;</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeSMSPaymentListAmount">makeSMSPayment</a>(int[] listAmount, String 
-state, String target, String noticeUrl, String title, String description)</p>
+state, String target, String noticeUrl, String title, String description)</p></strong>
 <p>&nbsp;显示短信支付面板以及价格表</p>
 <p><strong>Parameters:</strong></p>
 <p>- listAmount:价格表<br />
@@ -157,10 +134,10 @@ state, String target, String noticeUrl, String title, String description)</p>
 - noticeUrl: 交易结束后的URL<br />
 - title: 支付的详细描述<br />
 - description: 交易结束后的callback </p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeSMSPaymentNoUI">makeSMSPayment</a>(int amount, String state, String 
-target, String noticeUrl, <a href="SMSPaymentCallback.html">SMSPaymentCallback</a> 
-callback)</p>
+target, String noticeUrl, <a href="SMSPaymentCallback.html">SMSPaymentCallback</a>
+callback)</p></strong>
 <p>取短信句法，价格已定 (<em>用于自己设计支付面板的应用， 不使用 Appota SDK 的面板</em>).</p>
 <p><strong>Parameters:</strong></p>
 <p>- amount: 价格<br />
@@ -168,8 +145,8 @@ callback)</p>
 - target: 开发商输入的target<br />
 - noticeUrl: 交易结束后的URL <br />
 - callback: 交易结束后的callback </p>
-<p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
-title, String description, String noticeUrl, String state, String target)</p>
+<hr/><strong><p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
+title, String description, String noticeUrl, String state, String target)</p></strong>
 <p>显示充值卡支付面板，让用户输入卡号以及卡吗（serial number)</p>
 <p><strong>Parameters:</strong></p>
 <p>- title: 支付窗口标题<br />
@@ -177,11 +154,11 @@ title, String description, String noticeUrl, String state, String target)</p>
 - noticeUrl: 交易结束后的URL <br />
 - state: 开发商输入的 state<br />
 - target: 开发商输入的target</p>
-<p class="method_detail">public void <a name="makeCardPaymentNoUI">
+<hr/><strong><p class="method_detail">public void <a name="makeCardPaymentNoUI">
 makeCardPayment</a>(String cardSerial, String cardCode, String vendor, String 
 noticeUrl, String state, String target, <a href="CardPaymentCallback.html">
 CardPaymentCallback</a> callback) throws <a href="AppotaPaymentException.html">
-AppotaPaymentException</a></p>
+AppotaPaymentException</a></p></strong>
 <p>&nbsp;使用充值卡支付方式，不显示Appota SDK 的面板，直接转到支付网关</p>
 <p><strong>Parameters:</strong></p>
 <p>- cardSerial: 卡吗<br />
@@ -200,9 +177,9 @@ MegaCard 卡<br />
 - noticeUrl: 交易结束后的URL<br />
 - state: 开发商输入的 state<br />- target: 开发商输入的target<br />
 - callback: 交易结束后的callback </p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeBankPaymentOneAmount">makeBankPayment</a>(int amount, String 
-noticeUrl, String state, String target, String title, String description)</p>
+noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>显示网络银行信用支付方式的面板</p>
 <p><strong>Parameters:</strong></p>
 <p>- amount: 价格<br />
@@ -211,9 +188,9 @@ noticeUrl, String state, String target, String title, String description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeBankPaymentListAmount">makeBankPayment</a>(int[] amounts, String 
-noticeUrl, String state, String target, String title, String description)</p>
+noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>显示网络银行信用支付面板以及价格表</p>
 <p><strong>Parameters:</strong></p>
 <p>- amounts: 价格表<br />
@@ -222,9 +199,9 @@ noticeUrl, String state, String target, String title, String description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeBankPaymentNoAmount">makeBankPayment</a>(String noticeUrl, String 
-state, String target, String title, String description)</p>
+state, String target, String title, String description)</p></strong>
 <p>显示网络银行信用支付面板，让用户自己填入数量</p>
 <p><strong>Parameters:</strong></p>
 <p>- noticeUrl: 交易结束后的 Url<br />
@@ -232,9 +209,9 @@ state, String target, String title, String description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makePaypalPaymentOneAmount">makePaypalPayment</a>(double amount, String 
-noticeUrl, String state, String target, String title, String description)</p>
+noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>显示支付宝支付面板以及价格</p>
 <p><strong>Parameters:</strong></p>
 <p>- amount: 价格<br />
@@ -243,9 +220,9 @@ noticeUrl, String state, String target, String title, String description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void <a name="makePaypalPaymentNoUI">
+<hr/><strong><p class="method_detail">public void <a name="makePaypalPaymentNoUI">
 makePaypalPayment</a>(String noticeUrl, String state, String target, String 
-title, String description)</p>
+title, String description)</p></strong>
 <p>显示支付宝支付面板让用户填入数量</p>
 <p><strong>Parameters:</strong></p>
 <p>- noticeUrl: 交易结束后的URL <br />
@@ -253,9 +230,9 @@ title, String description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makePaypalPaymentListAmount">makePaypalPayment</a>(double[] amounts, 
-String noticeUrl, String state, String target, String title, String description)</p>
+String noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>显示支付宝支付面板以及价格表</p>
 <p><strong>Parameters:</strong></p>
 <p>- amount: 价格表<br />
@@ -264,10 +241,10 @@ String noticeUrl, String state, String target, String title, String description)
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p class="method_detail">public void
+<hr/><strong><p class="method_detail">public void
 <a name="makeGooglePlayPaymentListItem">makeGooglePlayPayment</a>(List&lt;<a href="InAppPurchaseItem.html">InAppPurchaseItem</a>&gt; 
 items, String noticeUrl, String state, String target, String title, String 
-description)</p>
+description)</p></strong>
 <p>显示Google Play Payment 支付面板以及 IAP item表</p>
 <p><strong>Parameters:</strong></p>
 <p>- items: IAP items 表<br />
@@ -276,10 +253,11 @@ description)</p>
 - target: 开发商输入的target<br />
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
-<p>public void
+
+<hr/><strong><p>public void
 <a name="makeGooglePlayPaymentOneItem">makeGooglePlayPayment</a>(<a href="InAppPurchaseItem.html">InAppPurchaseItem</a> 
 item, String noticeUrl, String state, String target, String title, String 
-description)</p>
+description)</p></strong>
 <p>显示Google Play Payment 支付面板以及一个IAP item</p>
 <p><strong>Parameters:</strong></p>
 <p>- items: IAP items <br />
@@ -289,7 +267,3 @@ description)</p>
 - title: 支付窗口的标题<br />
 - description: 支付的详细描述</p>
 <p>&nbsp;</p>
-
-</body>
-
-</html>
