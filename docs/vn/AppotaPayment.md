@@ -1,21 +1,3 @@
-<head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>AppotaPayment</title>
-<style type="text/css">
-.class_title {
-	font-size: x-large;
-}
-.auto-style1 {
-	font-size: large;
-}
-.auto-style2 {
-	color: #3298D5;
-}
-</style>
-<link href="../main.css" rel="stylesheet" type="text/css" />
-</head>
-
 <body>
 
 <p class="class_title"><strong class="class_title">AppotaPayment</strong></p>
