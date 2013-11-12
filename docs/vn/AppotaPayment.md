@@ -147,9 +147,9 @@ String target, String noticeUrl, String title, String description, final
 - callback: Hàm callback được gọi khi kết thúc giao dịch</p> 
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeSMSPaymentListAmount">makeSMSPayment</a>(int[] listAmount, String 
-state, String target, String noticeUrl, String title, String description)</p>
+state, String target, String noticeUrl, String title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức SMS với danh sách 
 		giá tiền cho trước.</p>
 <p><strong>Parameters:</strong></p>
@@ -161,10 +161,10 @@ state, String target, String noticeUrl, String title, String description)</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeSMSPaymentNoUI">makeSMSPayment</a>(int amount, String state, String 
 target, String noticeUrl, <a href="SMSPaymentCallback.html">SMSPaymentCallback</a> 
-callback)</p>
+callback)</p></strong>
 <p>Lấy cú pháp tin nhắn thanh toán theo giá tiền cho trước, (dành cho những ứng 
 dụng tự thiết kế giao diện thanh toán, không sử dụng giao diện hiển thị của 
 Appota SDK).</p>
@@ -176,8 +176,8 @@ Appota SDK).</p>
 - callback: Hàm callback được gọi khi kết thúc giao dịch</p>
 
 <hr />
-<p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
-title, String description, String noticeUrl, String state, String target)</p>
+<strong><p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
+title, String description, String noticeUrl, String state, String target)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức thẻ cào cho phép người dùng 
 nhập mã thẻ và số sê-ri.</p>
 <p><strong>Parameters:</strong></p>
@@ -188,11 +188,11 @@ nhập mã thẻ và số sê-ri.</p>
 - target: Chuỗi target tùy biến cho dev gửi lên</p>
 
 <hr />
-<p class="method_detail">public void <a name="makeCardPaymentNoUI">
+<strong><p class="method_detail">public void <a name="makeCardPaymentNoUI">
 makeCardPayment</a>(String cardSerial, String cardCode, String vendor, String 
 noticeUrl, String state, String target, <a href="CardPaymentCallback.html">
 CardPaymentCallback</a> callback) throws <a href="AppotaPaymentException.html">
-AppotaPaymentException</a></p>
+AppotaPaymentException</a></p></strong>
 <p>Thanh toán bằng thẻ cào trực tiếp, không sử dụng giao diện hiển thị 
 		của Appota SDK. Người dùng sẽ được dẫn thẳng ra website của cổng thanh 
 toán qua trình duyệt.</p>
@@ -215,9 +215,9 @@ Thẻ MegaCard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
 - callback: Hàm callback được gọi khi kết thúc giao dịch</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeBankPaymentOneAmount">makeBankPayment</a>(int amount, String 
-noticeUrl, String state, String target, String title, String description)</p>
+noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức internet banking với 
 		giá tiền cho trước.</p>
 <p><strong>Parameters:</strong></p>
@@ -229,9 +229,9 @@ noticeUrl, String state, String target, String title, String description)</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeBankPaymentListAmount">makeBankPayment</a>(int[] amounts, String 
-noticeUrl, String state, String target, String title, String description)</p>
+noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức internet banking 
 		với danh sách giá tiền cho trước.</p>
 <p><strong>Parameters:</strong></p>
@@ -243,9 +243,9 @@ noticeUrl, String state, String target, String title, String description)</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeBankPaymentNoAmount">makeBankPayment</a>(String noticeUrl, String 
-state, String target, String title, String description)</p>
+state, String target, String title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức internet banking cho phép 
 người dùng tự nhập số tiền.</p>
 <p><strong>Parameters:</strong></p>
@@ -256,11 +256,11 @@ người dùng tự nhập số tiền.</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makePaypalPaymentOneAmount">makePaypalPayment</a>(double amount, String 
 noticeUrl, String state, String target, String title, String description)</p>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức Paypal với giá tiền cho 
-trước.</p>
+trước.</p></strong>
 <p><strong>Parameters:</strong></p>
 <p>- amount: Giá tiền<br />
 - noticeUrl: URL được gọi khi kết thúc giao dịch <br />
@@ -270,9 +270,9 @@ trước.</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void <a name="makePaypalPaymentNoUI">
+<strong><p class="method_detail">public void <a name="makePaypalPaymentNoUI">
 makePaypalPayment</a>(String noticeUrl, String state, String target, String 
-title, String description)</p>
+title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức Paypal cho phép 
 		người dùng nhập số tiền.</p>
 <p><strong>Parameters:</strong></p>
@@ -283,9 +283,9 @@ title, String description)</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makePaypalPaymentListAmount">makePaypalPayment</a>(double[] amounts, 
-String noticeUrl, String state, String target, String title, String description)</p>
+String noticeUrl, String state, String target, String title, String description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức Paypal với danh sách giá tiền 
 		cho trước.</p>
 <p><strong>Parameters:</strong></p>
@@ -297,10 +297,10 @@ String noticeUrl, String state, String target, String title, String description)
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeGooglePlayPaymentListItem">makeGooglePlayPayment</a>(List&lt;<a href="InAppPurchaseItem.html">InAppPurchaseItem</a>&gt; 
 items, String noticeUrl, String state, String target, String title, String 
-description)</p>
+description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức Google Play Payment với danh 
 		sách IAP item cho trước.</p>
 <p><strong>Parameters:</strong></p>
@@ -312,10 +312,10 @@ description)</p>
 - description: Mô tả chi tiết cho thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeGooglePlayPaymentOneItem">makeGooglePlayPayment</a>(<a href="InAppPurchaseItem.html">InAppPurchaseItem</a> 
 item, String noticeUrl, String state, String target, String title, String 
-description)</p>
+description)</p></strong>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức Google Play Payment với một 
 IAP item cho trước.</p>
 <p><strong>Parameters:</strong></p>
