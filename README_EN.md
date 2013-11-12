@@ -72,7 +72,7 @@ configuration:
 
 **3. Integrate Payment**
 
-Appota Payment SDK provides class [AppotaPayment](AppotaPayment.html)
+Appota Payment SDK provides class [AppotaPayment](docs/en/AppotaPayment.md)
 packaging all interfaces of each payment methods. To integrate any
 payment methods, you just call respective functions given.
 
