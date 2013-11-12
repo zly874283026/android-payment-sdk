@@ -124,17 +124,17 @@ khác nhau.</p>
 
 <p>&nbsp;</p>
 <hr />
-<p class="method_detail">public void
-<a name="setContext">setContext</a>(Activity context)</p>
+<strong><p class="method_detail">public void
+<a name="setContext">setContext</a>(Activity context)</p></strong>
 <p>Đặt context</p>
 <p><strong>Parameters:</strong></p>
 <p>- context: Context hiển thị giao diện thanh toán</p>
 
 <hr />
-<p class="method_detail">public void
+<strong><p class="method_detail">public void
 <a name="makeSMSPaymentOneAmount">makeSMSPayment</a>(int amount, String state, 
 String target, String noticeUrl, String title, String description, final
-<a href="TransactionStatusCallback.html">TransactionStatusCallback</a> callback)</p>
+<a href="TransactionStatusCallback.html">TransactionStatusCallback</a> callback)</p></strong>
 <p>Sử dụng phương thức SMS với giá tiền 
 		cho trước.</p>
 <p><strong>Parameters:</strong></p>
