@@ -84,7 +84,7 @@ android:windowSoftInputMode="adjustPan" />
 **3. 合并支付**
 
 给开发商提供包括所有支付方式面板的class
-AppotaPayment，想选择其中任何一个面板只要叫出相应的函数。
+[AppotaPayment](docs/cn/AppotaPayment.md)，想选择其中任何一个面板只要叫出相应的函数。
 
 **4 - 用SDK Samples**
 
