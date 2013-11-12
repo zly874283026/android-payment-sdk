@@ -26,46 +26,60 @@ Play Payment
 
 -在project Android打开 \<AndroidMainfest.xml\> 文件
 
--加上下面的配置以配置permission
+-加上下面的配置以配置permission:
 
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="com.android.vending.BILLING" />
+```xml
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="com.android.vending.BILLING" />
+```
 
-- 若使用短信支付面板，加上以下activity
+- 若使用短信支付面板，加上以下activity:
 
-    <activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+```xml
+<activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+```
 
 - 若使用充值卡支付面板，加上以下 activity:
 
-    <activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
+```xml
+<activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
+```
 
 - 若使用网络银行信用支付面板，加上以下activity：
 
-    <activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
-    <activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+```xml
+<activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
+<activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+```
 
 -  若使用支付宝支付面板，加上以下activity：
 
-    <activity android:name="com.appota.payment.PaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"
-    android:windowSoftInputMode="adjustPan" />
-    <activity android:name="com.appota.payment.ConfirmPaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
-    <service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" />
-    <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
-    <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
-    <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
-    <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
-    <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+```xml
+<activity android:name="com.appota.payment.PaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"
+android:windowSoftInputMode="adjustPan" />
+<activity android:name="com.appota.payment.ConfirmPaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+<service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" />
+<activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+<activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+<activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+<activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+<activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+```
 
 - 若使用Google Play Payment 面板，加上以下activity：
 
-    <activity android:name="com.appota.payment.GooglePaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+```xml
+<activity android:name="com.appota.payment.GooglePaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+```
 
 -若想打开或者关上sandbox, 加上以下配置：
 
-    <meta-data android:name="sandbox" android:value="false" />
+```xml
+<meta-data android:name="sandbox" android:value="false" />
+```
 
 **3. 合并支付**
 
