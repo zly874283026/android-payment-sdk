@@ -173,6 +173,8 @@ Appota SDK).</p>
 - target: Chuỗi target tùy biến cho dev gửi lên<br />
 - noticeUrl: URL được gọi khi kết thúc giao dịch <br />
 - callback: Hàm callback được gọi khi kết thúc giao dịch</p>
+
+<hr />
 <p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
 title, String description, String noticeUrl, String state, String target)</p>
 <p>Hiển thị giao diện thanh toán sử dụng phương thức thẻ cào cho phép người dùng 
