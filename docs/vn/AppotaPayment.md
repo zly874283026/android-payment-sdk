@@ -123,6 +123,7 @@ khác nhau.</p>
 </table>
 
 <p>&nbsp;</p>
+<hr />
 <p class="method_detail">public void
 <a name="setContext">setContext</a>(Activity context)</p>
 <p>Đặt context</p>
