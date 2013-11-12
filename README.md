@@ -37,13 +37,17 @@ Tải Appota Payment SDK cho Android và import vào IDE.
 ```
 
 - Để sử dụng giao diện thanh toán SMS, thêm cấu hình activity sau:
+
 ```xml
     <activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
+
 - Để sử dụng giao diện thanh toán thẻ cào, thêm cấu hình activity sau:
+
 ```xml
     <activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
 ```
+
 - Để sử dụng giao diện thanh toán internet banking, thêm cấu hình
 activity sau:
 ```xml
