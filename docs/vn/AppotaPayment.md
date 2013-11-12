@@ -128,6 +128,8 @@ khác nhau.</p>
 <p>Đặt context</p>
 <p><strong>Parameters:</strong></p>
 <p>- context: Context hiển thị giao diện thanh toán</p>
+
+<hr />
 <p class="method_detail">public void
 <a name="makeSMSPaymentOneAmount">makeSMSPayment</a>(int amount, String state, 
 String target, String noticeUrl, String title, String description, final
@@ -141,7 +143,9 @@ String target, String noticeUrl, String title, String description, final
 - noticeUrl: URL được gọi khi kết thúc giao dịch <br />
 - title: Tiêu đề cửa sổ thanh toán<br />
 - description: Mô tả chi tiết cho thanh toán<br />
-- callback: Hàm callback được gọi khi kết thúc giao dịch</p>
+- callback: Hàm callback được gọi khi kết thúc giao dịch</p> 
+
+<hr />
 <p class="method_detail">public void
 <a name="makeSMSPaymentListAmount">makeSMSPayment</a>(int[] listAmount, String 
 state, String target, String noticeUrl, String title, String description)</p>
