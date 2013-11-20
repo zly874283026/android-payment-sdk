@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>TransactionStatusCallback</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-size: x-large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="auto-style2"><strong>TransactionStatusCallback</strong></p>
+<p>package com.appota.payment.callback</p>
+<p><span class="auto-style1">public interface </span><strong>
+<span class="auto-style1">TransactionStatusCallback</span></strong></p>
+<p class="auto-style1"><strong>General </strong></p>
+<p>TransactionStatusCallback is an interface that defines callback functions 
+after process of implementing payment transaction.</p>
+<p class="auto-style1"><strong>Methods</strong></p>
+<table border="1" style="width: 100%" class="gridtable">
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onTransactionSuccess(<a href="TransactionResult.html">TransactionResult</a> 
+		result)<br />
+		<em>Callback function called when transaction is successful.</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onTransactionError(String message)<br />
+		<em>Callback function called when transaction is fail.</em></td>
+	</tr>
+	</table>
+
+</body>
+
+</html>

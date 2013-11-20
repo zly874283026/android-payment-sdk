@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>SMSPaymentCallback</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-size: x-large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="auto-style2"><strong>SMSPaymentCallback</strong></p>
+<p>package com.appota.payment.callback</p>
+<p><span class="auto-style1">public interface </span><strong>
+<span class="auto-style1">SMSPaymentCallback</span></strong></p>
+<p class="auto-style1"><strong>概况</strong></p>
+<p>CardPaymentCallback是起造SMS交易后的interfall callback</p>
+<p class="auto-style1"><strong>具体方式</strong></p>
+<table border="1" style="width: 100%" class="gridtable">
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onSMSPaymentSuccess(<a href="SMSPaymentResult.html">SMSPaymentResult</a> 
+		result)<br />
+		<em>起造交易成功后的callback</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td>onSMSPaymentError(String message)<br />
+		<em>起造交易失败后的callback</em></td>
+	</tr>
+	</table>
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+﻿<p class="class_title"><strong class="class_title">AppotaPayment</strong></p>
+<p>package com.appota.payment</p>
+<p><span class="auto-style1">public class </span> <strong>
+<span class="auto-style1">AppotaPayment</span><br />
+</strong>extends Object</p>
+<p><strong>General</strong></p>
+<p>AppotaPayment is a class which executes all main features of Payment SDK. 
+This class provides functions that call to payment interfaces for each various 
+methods.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="gridtable">
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#setContext">setContext(Activity context)</a><br />
+		<em>Set context.</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeSMSPaymentOneAmount">makeSMSPayment(int amount, String 
+		state, String target, String noticeUrl, String title, String 
+		description, final TransactionStatusCallback callback)</a><br />
+		<em>Display payment interface using SMS method with given value</em>.<br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeSMSPaymentListAmount">makeSMSPayment(int[] listAmount, 
+		String state, String target, String noticeUrl, String title, String 
+		description)</a><br />
+		<em>Dis play payment interface using SMS method with a list of given value</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeSMSPaymentNoUI">makeSMSPayment(int amount, String 
+		state, String target, String noticeUrl, SMSPaymentCallback callback)</a><br />
+		<em>Take SMS structures with given value ( for those applications 
+		designing payment interface themselves, do not use displayed interface 
+		of Appota SDK)</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeCardPaymentUI">makeCardPayment(String title, String 
+		description, String noticeUrl, String state, String target)</a><br />
+		<em>Display payment interface using Card method.</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeCardPaymentNoUI">makeCardPayment(String cardSerial, 
+		String cardCode, String vendor, String noticeUrl, String state, String 
+		target, CardPaymentCallback callback)</a><br />
+		<em>Payment by direct Card</em> <em>( for those applications designing 
+		payment interface themselves, do not use displayed interface of Appota 
+		SDK)</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeBankPaymentOneAmount">makeBankPayment(int amount, 
+		String noticeUrl, String state, String target, String title, String 
+		description)</a><em><br />
+		Display payment interface using internet banking with given value.</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeBankPaymentListAmount">makeBankPayment(int[] amounts, 
+		String noticeUrl, String state, String target, String title, String 
+		description)</a><br />
+		<em>Display payment interface using internet banking with a list of 
+		given value.</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeBankPaymentNoAmount">makeBankPayment(String noticeUrl, 
+		String state, String target, String title, String description)</a><br />
+		<em>Display payment interface using internet banking which allows users 
+		to add the amount of money.</em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makePaypalPaymentOneAmount">makePaypalPayment(double 
+		amount, String noticeUrl, String state, String target, String title, 
+		String description)</a><br />
+		<em>Display payment interface using Paypal method with given value.</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makePaypalPaymentNoUI">makePaypalPayment(String noticeUrl, 
+		String state, String target, String title, String description)</a><br />
+		<em>Display payment interface using Paypal which allows users to add the 
+		amount of money.</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makePaypalPaymentListAmount">makePaypalPayment(double[] 
+		amounts, String noticeUrl, String state, String target, String title, 
+		String description)</a><br />
+		<em>Display payment interface using Paypal with a list of given value. </em></td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeGooglePlayPaymentListItem">
+		makeGooglePlayPayment(List&lt;InAppPurchaseItem&gt; items, String noticeUrl, 
+		String state, String target, String title, String description)</a><br />
+		<em>Display payment interface using Google Play Payment with a list of 
+		given IAP items.</em><br />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 122px">void</td>
+		<td><a href="#makeGooglePlayPaymentOneItem">
+		makeGooglePlayPayment(InAppPurchaseItem item, String noticeUrl, String 
+		state, String target, String title, String description)</a><br />
+		<em>Display payment interface using Google Play Payment with a given IAP 
+		item.</em><br />
+		</td>
+	</tr>
+</table>
+
+<p>&nbsp;</p>
+<hr/><strong><p class="method_detail">public void
+<a name="setContext">setContext</a>(Activity context)</p></strong>
+<p>Set context</p>
+<p><strong>Parameters:</strong></p>
+<p>- context: Context displays payment interface</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeSMSPaymentOneAmount">makeSMSPayment</a>(int amount, String state, 
+String target, String noticeUrl, String title, String description, final
+<a href="TransactionStatusCallback.html">TransactionStatusCallback</a> callback)</p></strong>
+<p>Using SMS method with given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- amount: value of each SMS<br />
+- state:&nbsp; A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- noticeUrl: URL called when transaction ends<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically <br />
+- callback: Callback function called when transaction ends</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeSMSPaymentListAmount">makeSMSPayment</a>(int[] listAmount, String 
+state, String target, String noticeUrl, String title, String description)</p></strong>
+<p>Display payment interface using SMS method with a list of given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- listAmount: A list of SMS value <br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- noticeUrl: URL called when transaction ends<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically </p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeSMSPaymentNoUI">makeSMSPayment</a>(int amount, String state, String 
+target, String noticeUrl, <a href="SMSPaymentCallback.html">SMSPaymentCallback</a> 
+callback)</p></strong>
+<p><em>Take SMS structures with given value ( for those applications designing 
+payment interface themselves, do not use displayed interface of Appota SDK)</em></p>
+<p><strong>Parameters:</strong></p>
+<p>- amount: SMS Value<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- noticeUrl: URL called when transaction ends<br />
+- callback: Callback function called when transaction ends</p>
+<hr/><strong><p class="method_detail">public void <a name="makeCardPaymentUI">makeCardPayment</a>(String 
+title, String description, String noticeUrl, String state, String target)</p></strong>
+<p>&nbsp;Display payment interface using Card Method which allows users add card code 
+and serial number.</p>
+<p><strong>Parameters:</strong></p>
+<p>- title: The name of payment window<br />
+- description: Decribe payment specifically <br />
+- noticeUrl: URL called when transaction ends <br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to</p>
+<hr/><strong><p class="method_detail">public void <a name="makeCardPaymentNoUI">
+makeCardPayment</a>(String cardSerial, String cardCode, String vendor, String 
+noticeUrl, String state, String target, <a href="CardPaymentCallback.html">
+CardPaymentCallback</a> callback) throws <a href="AppotaPaymentException.html">
+AppotaPaymentException</a></p></strong>
+<p>Payment by direct cards, do not use displayed interface of Appota SDK. Users 
+are linked directly to the payment gateway's website via browser</p>
+<p><strong>Parameters:</strong></p>
+<p>- cardSerial: Serial Number<br />
+- cardCode: Card Code Number<br />
+- vendor: Suppliers. Now supporting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">vinaphone</span>: 
+Vinaphone Card<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">mobifone</span>:&nbsp; 
+Mobifone Card<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">viettel</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Viettel Card<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">fpt</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+FPT Gate Card<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">mega</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+MegaCard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />- target: A seri of 
+customized targets for dev to send to<br />
+- callback: Callback function called when transaction ends</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeBankPaymentOneAmount">makeBankPayment</a>(int amount, String 
+noticeUrl, String state, String target, String title, String description)</p></strong>
+<p>Display payment interface using Internet Banking with given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- amount: Value to charge<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically </p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeBankPaymentListAmount">makeBankPayment</a>(int[] amounts, String 
+noticeUrl, String state, String target, String title, String description)</p></strong>
+<p>Display payment interface using Internet Banking with a list of given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- amounts: A list of value to charge<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically </p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeBankPaymentNoAmount">makeBankPayment</a>(String noticeUrl, String 
+state, String target, String title, String description)</p></strong>
+<p>Display payment interface using Internet Banking which allows users add the 
+amount of money</p>
+<p><strong>Parameters:</strong></p>
+<p>- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically </p>
+<hr/><strong><p class="method_detail">public void
+<a name="makePaypalPaymentOneAmount">makePaypalPayment</a>(double amount, String 
+noticeUrl, String state, String target, String title, String description)</p></strong>
+<p>Display payment interface using Paypal with given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- amount: Value to charge<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically</p>
+<hr/><strong><p class="method_detail">public void <a name="makePaypalPaymentNoUI">
+makePaypalPayment</a>(String noticeUrl, String state, String target, String 
+title, String description)</p></strong>
+<p>Display payment interface using Paypal which allows users add the amount of 
+money to charge</p>
+<p><strong>Parameters:</strong></p>
+<p>- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makePaypalPaymentListAmount">makePaypalPayment</a>(double[] amounts, 
+String noticeUrl, String state, String target, String title, String description)</p></strong>
+<p>Display payment interface using Paypal with a list of given value</p>
+<p><strong>Parameters:</strong></p>
+<p>- amounts: List of value to charge<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeGooglePlayPaymentListItem">makeGooglePlayPayment</a>(List&lt;<a href="InAppPurchaseItem.html">InAppPurchaseItem</a>&gt; 
+items, String noticeUrl, String state, String target, String title, String 
+description)</p></strong>
+<p>Display payment interface using Google Play Payment with a list of given IAP 
+items</p>
+<p><strong>Parameters:</strong></p>
+<p>- items: List of IAP items<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically</p>
+<hr/><strong><p class="method_detail">public void
+<a name="makeGooglePlayPaymentOneItem">makeGooglePlayPayment</a>(<a href="InAppPurchaseItem.html">InAppPurchaseItem</a> 
+item, String noticeUrl, String state, String target, String title, String 
+description)</p></strong>
+<p>Display payment interface using Google Play Payment with a given IAP item.</p>
+<p><strong>Parameters:</strong></p>
+<p>- item: IAP item<br />
+- noticeUrl: URL called when transaction ends<br />
+- state: A seri of customized states for dev to send to<br />
+- target: A seri of customized targets for dev to send to<br />
+- title: The name of payment window<br />
+- description: Decribe payment specifically</p>
+<p>&nbsp;</p>

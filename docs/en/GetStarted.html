@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Android SDK - Get Started</title>
+<style type="text/css">
+.class_title {
+	font-size: x-large;
+}
+.auto-style1 {
+	font-size: large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+<link href="../code.css" rel="stylesheet" type="text/css" />
+<script src="../rainbow.min.js"></script>
+</head>
+
+<body>
+
+<p class="class_title"><strong>Get Started</strong></p>
+<p>Appota Payment SDK is the simplest way to integrate payment for your 
+application in Appota system. This SDK provides solutions for payment methods 
+such as: SMS, Card. Internet Banking, Paypal and Google Play Payment.</p>
+<p class="auto-style1"><strong>Steps to integrate SDK:</strong></p>
+<p>1. Import SDK into your project</p>
+<p>2. Configure SDK</p>
+<p>3. Integrate Payment</p>
+<p>&nbsp;</p>
+<p class="auto-style1"><strong>1. Import SDK into project</strong></p>
+<p>Download Appota Payment SDK for Android and import into IDE.</p>
+<p class="auto-style1"><strong>2. Configure SDK</strong></p>
+<p><strong>Configuration &lt;AndroidMainfest.xml&gt;</strong></p>
+<p>- Open file &lt;AndroidMainfest.xml&gt; in your project Android.</p>
+<p>- Add following lines to configure permission:</p>
+<pre><code data-language="scheme">&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt;
+&lt;uses-permission android:name="com.android.vending.BILLING" /&gt;</code></pre>
+<p>- To use SMS payment interface, add following activity configuration:</p>
+<pre><code data-language="scheme">&lt;activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" /&gt;</code></pre>
+<p>- To use Card payment interface, add following activity configuration:</p>
+<pre><code data-language="scheme">&lt;activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" /&gt;</code></pre>
+<p>- To use Internet Banking payment interface, add following acticity 
+configuration:</p>
+<pre><code data-language="scheme">&lt;activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" /&gt;
+&lt;activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" /&gt;</code></pre>
+<p>- To use Paypal payment interface, add following activity configuration:</p>
+<pre><code data-language="scheme">&lt;activity android:name="com.appota.payment.PaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"
+android:windowSoftInputMode="adjustPan" /&gt;
+&lt;activity android:name="com.appota.payment.ConfirmPaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" /&gt;
+&lt;service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" /&gt;
+&lt;activity android:name="com.paypal.android.sdk.payments.PaymentActivity" /&gt;
+&lt;activity android:name="com.paypal.android.sdk.payments.LoginActivity" /&gt;
+&lt;activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" /&gt;
+&lt;activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" /&gt;
+&lt;activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" /&gt;</code></pre>
+<p>- To use Google Play Payment interface, add following activity configuration:</p>
+<pre><code data-language="scheme">&lt;activity android:name="com.appota.payment.GooglePaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"/&gt;</code></pre>
+<p>- To turn off or on Sandbox mode, add following configuration:</p>
+<pre><code data-language="scheme">&lt;meta-data android:name="sandbox" android:value="false" /&gt;</code></pre>
+
+<p class="auto-style1"><strong>3. Integrate Payment</strong></p>
+<p>Appota Payment SDK provides class <a href="AppotaPayment.html">AppotaPayment</a> 
+packaging all interfaces of each payment methods. To integrate any payment 
+methods, you just call respective functions given.</p>
+<p class="auto-style1"><strong>4 - Run SDK Samples</strong></p>
+<p>This SDK attachs a simple sample to instruct you to use Payment SDK. To run 
+sample, import project sample in folder SDK into IDE, open 
+com.appota.paymentonlysample.MainActivity.</p>
+<p>You just change <em>apiKey </em>and <em>sandboxApiKey </em>provided by Appota 
+for your project and run trial project, payment interface for all methods will 
+be shown as following:</p>
+<p><img src="sample.png" width="250" />&nbsp; <img src="sample_card.png" width="250" />&nbsp;
+<img src="sample_sms.png" width="250" /></p>
+</body>
+
+</html>
