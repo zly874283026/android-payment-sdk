@@ -12,6 +12,7 @@ import com.appota.payment.AppotaPaymentReceiver;
 import com.appota.payment.callback.TransactionStatusCallback;
 import com.appota.payment.commons.AlertDialogManager;
 import com.appota.payment.commons.AppotaAction;
+import com.appota.payment.core.AppotaPaymentException;
 import com.appota.payment.model.CardPaymentResult;
 import com.appota.payment.model.InAppPurchaseItem;
 import com.appota.payment.model.TransactionResult;
@@ -24,8 +25,10 @@ public class MainActivity extends Activity {
 	private AppotaPayment ap;
 	private AlertDialogManager am;
 	private MyReceiver receiver;
-    private String apiKey = "Your api key here";
-    private String sandboxApiKey = "Your sandbox api key here";
+    private String apiKey = "123593a5f93eac19e26baee408f9928f0525e6a18";
+    private String sandboxApiKey = "c144dc212ff247d3daef97f97c5ea2a40525e6957";
+    //private String apiKey = "955185c78bb2f20dffabe2fb281c633a0525bba1a";
+    //private String sandboxApiKey = "41d586a1c2729666a22570a743f1610f0525bba1a";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +66,8 @@ public class MainActivity extends Activity {
 		});
 	}
 	
-	public void buySmsListAmount(View v){
-		int[] listAmount = new int[]{500, 1000, 5000};
+	public void buySmsListAmount(View v) throws AppotaPaymentException {
+		int[] listAmount = new int[]{500, 1000, 3};
 		ap.makeSMSPayment(listAmount, "", "duydkny", "http://abc.com", "Nap tien vao de em lay doanh thu", "5000 -> 500 coins \n10000 -> 1000 coins \n15000 -> 1500 coins");
 	}
 	
