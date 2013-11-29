@@ -19,6 +19,15 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:entries="@array/com_appota_lang"/>
+
+    <com.appota.payment.widget.AppotaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/com_appota_text_version"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="13sp"
+        android:text="@string/com_appota_sdk_version"/>
     
     <ImageView 
         android:layout_width="wrap_content"
