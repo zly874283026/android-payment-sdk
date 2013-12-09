@@ -68,5 +68,5 @@
     <string name="com_appota_pay_via_google">Thanh toán qua Google Play</string>
     <string name="com_appota_confirm_bank">Xác nhận giao dịch ngân hàng</string>
     <string name="com_appota_confirm_paypal">Xác nhận giao dịch PayPal</string>
-    <string name="com_appota_sdk_version">v1.0.4</string>
+    <string name="com_appota_sdk_version">v1.0.5</string>
 </resources>
