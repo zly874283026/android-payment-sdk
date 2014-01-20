@@ -3,17 +3,14 @@ package com.appota.paymentonlysample;
 import android.app.Activity;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
 import com.appota.payment.AppotaPayment;
 import com.appota.payment.AppotaPaymentReceiver;
-import com.appota.payment.callback.TransactionStatusCallback;
 import com.appota.payment.commons.AlertDialogManager;
 import com.appota.payment.commons.AppotaAction;
 import com.appota.payment.core.AppotaPaymentException;
-import com.appota.payment.model.CardPaymentResult;
 import com.appota.payment.model.InAppPurchaseItem;
 import com.appota.payment.model.TransactionResult;
 
@@ -69,19 +66,6 @@ public class MainActivity extends Activity {
 	public void buyBankListAmount(View v){
 		int[] amounts = new int[] {20000, 21000, 22000};
 		ap.makeBankPayment(amounts, "http://abc.com", "", "duydkny", "Custom title", "10000 -> 500 coins \n20000 -> 1000 coins \n50000 -> 1500 coins");
-	}
-	
-	public void buyPaypalOneAmount(View v){
-		ap.makePaypalPayment(1.00, "http://abc.com", "", "duydkny", "Custom title", "10000 -> 500 coins \n20000 -> 1000 coins \n50000 -> 1500 coins");
-	}
-	
-	public void buyPaypalNoAmount(View v){
-		ap.makePaypalPayment("http://abc.com", "", "duydkny", "Custom title", "10000 -> 500 coins \n20000 -> 1000 coins \n50000 -> 1500 coins");
-	}
-	
-	public void buyPaypalListAmount(View v){
-		double[] amounts = new double[] {1.00, 2.99, 5.99};
-		ap.makePaypalPayment(amounts, "http://abc.com", "", "duydkny", "Custom title", "10000 -> 500 coins \n20000 -> 1000 coins \n50000 -> 1500 coins");
 	}
 
     public void buyGoogleListAmount(View v){

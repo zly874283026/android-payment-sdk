@@ -58,27 +58,6 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buy by Paypal one amount"
-            android:layout_gravity="center_horizontal"
-            android:onClick="buyPaypalOneAmount" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Buy by Paypal no amount"
-            android:layout_gravity="center_horizontal"
-            android:onClick="buyPaypalNoAmount" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Buy by Paypal list amount"
-            android:layout_gravity="center_horizontal"
-            android:onClick="buyPaypalListAmount" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Buy by Google one item"
             android:layout_gravity="center_horizontal"
             android:onClick="buyGoogleOneAmount" />
