@@ -46,8 +46,10 @@ Download Appota Payment SDK for Android and import into IDE.
 - To use Internet Banking payment interface, add following acticity
 configuration:
 
+``` xml
     <activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
     <activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
+```
 
 - To use Paypal payment interface, add following activity configuration:
 
