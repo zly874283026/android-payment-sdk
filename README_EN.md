@@ -29,6 +29,7 @@ Download Appota Payment SDK for Android and import into IDE.
 
 - Add following lines to configure permission:
 
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -37,19 +38,23 @@ Download Appota Payment SDK for Android and import into IDE.
 
 - To use SMS payment interface, add following activity configuration:
 
+
     <activity android:name="com.appota.payment.SMSPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
 
 - To use Card payment interface, add following activity configuration:
+
 
     <activity android:name="com.appota.payment.CardPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
 
 - To use Internet Banking payment interface, add following acticity
 configuration:
 
+
     <activity android:name="com.appota.payment.BankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan" />
     <activity android:name="com.appota.payment.ConfirmBankPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize" />
 
 - To use Paypal payment interface, add following activity configuration:
+
 
     <activity android:name="com.appota.payment.PaypalPaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"
     android:windowSoftInputMode="adjustPan" />
@@ -64,9 +69,11 @@ configuration:
 - To use Google Play Payment interface, add following activity
 configuration:
 
+
     <activity android:name="com.appota.payment.GooglePaymentActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
 
 - To turn off or on Sandbox mode, add following configuration:
+
 
     <meta-data android:name="sandbox" android:value="false" />
 
