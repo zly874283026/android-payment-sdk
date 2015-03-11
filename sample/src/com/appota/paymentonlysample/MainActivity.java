@@ -1,5 +1,8 @@
 package com.appota.paymentonlysample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -8,42 +11,33 @@ import android.widget.Toast;
 
 import com.appota.payment.AppotaPayment;
 import com.appota.payment.AppotaPaymentReceiver;
-import com.appota.payment.commons.AlertDialogManager;
 import com.appota.payment.commons.AppotaAction;
 import com.appota.payment.core.AppotaPaymentException;
 import com.appota.payment.model.InAppPurchaseItem;
 import com.appota.payment.model.TransactionResult;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends Activity {
 	
 	private AppotaPayment ap;
-	private AlertDialogManager am;
 	private MyReceiver receiver;
-    private String apiKey = "123593a5f93eac19e26baee408f9928f0525e6a18";
-    private String sandboxApiKey = "c144dc212ff247d3daef97f97c5ea2a40525e6957";
-    //private String apiKey = "955185c78bb2f20dffabe2fb281c633a0525bba1a";
-    //private String sandboxApiKey = "41d586a1c2729666a22570a743f1610f0525bba1a";
+    private String apiKey = "YOUR API KEY";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		ap = AppotaPayment.getInstance();
-		ap.setContext(this, apiKey, sandboxApiKey);
-		am = new AlertDialogManager(this);
-		
+		ap.setContext(this, apiKey);
 		receiver = new MyReceiver();
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(AppotaAction.PAYMENT_SUCCESS_ACTION);
+		filter.addAction(AppotaAction.PAYMENT_ERROR_ACTION);
 		registerReceiver(receiver, filter);
 	}
 	
 	public void buySmsOneAmount(View v){
-        ap.setContext(this, apiKey, sandboxApiKey);
-		ap.makeSMSPayment(500, "", "duydkny", "http://abc.com", "Custom title", "5000 -> 500 coins \n10000 -> 1000 coins \n15000 -> 1500 coins");
+		//ap.makeSMSPayment(500, "", "duydkny", "http://abc.com", "Custom title", "5000 -> 500 coins \n10000 -> 1000 coins \n15000 -> 1500 coins");
+        ap.makeDirectSMSPayment(500, "", "duydkny", "http://abc.com", "Custom title", "5000 -> 500 coins \n10000 -> 1000 coins \n15000 -> 1500 coins");
 	}
 	
 	public void buySmsListAmount(View v) throws AppotaPaymentException {
@@ -91,6 +85,12 @@ public class MainActivity extends Activity {
         public void onPaymentSuccess(TransactionResult result) {
             Toast.makeText(MainActivity.this, "Just for testing: " + result.getTransactionId() + " " + result.getType(), Toast.LENGTH_SHORT).show();
         }
+
+		@Override
+		public void onPaymentError() {
+			// TODO Auto-generated method stub
+			
+		}
     }
 	
 	@Override
